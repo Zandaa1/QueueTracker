@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # YOLOv8 MODEL USED
-model = YOLO("yolov8n.pt")
+model = YOLO("yolov8l.pt")
 
 # What Camera to use
 cap = cv2.VideoCapture(0)
@@ -47,6 +47,6 @@ while cap.isOpened():
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Release the video capture and close any OpenCV windows
+# CLOSE CAMERA
 cap.release()
 cv2.destroyAllWindows()
